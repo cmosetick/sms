@@ -1,0 +1,6 @@
+cmosetick/sms:
+  Build:
+    - pwd
+    - ls
+    - npm install twilio
+    - node twilio.js
