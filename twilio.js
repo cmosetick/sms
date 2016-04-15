@@ -5,7 +5,7 @@ var client = require('twilio')(process.env.TWILIO_SID, process.env.TWILIO_TOKEN)
 client.sendMessage({
 
     to: (process.env.TO_NUMBER), // Any number Twilio can deliver to
-    from: '+12062070805', // A number you bought from Twilio and can use for outbound communication
+    from: (process.env.FROM_NUMBER), // A number you bought from Twilio and can use for outbound communication
     body: (process.env.BODY) // body of the SMS message
 
 }, function(err, responseData) { //this function is executed when a response is received from Twilio
